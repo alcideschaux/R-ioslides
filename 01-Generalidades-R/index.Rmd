@@ -1,0 +1,92 @@
+---
+title: Introducción a la Programación en R
+subtitle: Generalidades
+author: Alcides Chaux, M.D.
+date: Centro para el Desarrollo de la Investigación Científica (CEDIC)
+output:
+  ioslides_presentation:
+    incremental: true
+    widescreen: true
+    css: ../assets/custom.css
+    logo: ../assets/Logo.gif
+---
+
+## Qué es R?
+- Lenguaje y entorno de programación para análisis estadístico y gráficos
+- Ampliamente utilizado por estadísticos y analistas de datos
+- Popular en investigación biomédica, bioinformática y matemáticas financieras
+- Multiplataforma (Windows, Macintosh, Linux)
+- Distribuido como software libre de código abierto
+
+## Breve historia
+```{r,echo=FALSE}
+yr <- version$year
+ver <- with(version, paste(major, minor, sep = "."))
+dat <- sprintf("%s %s", month.name[as.integer(version$month)], yr)
+```
+
+- 1991: Creado en Nueva Zelanda por Ross Ihaka y Robert Gentleman. Su experiencia se documenta en [Journal of Computational and Graphical Statistics, 5(3):299--314, 1996](https://www.stat.auckland.ac.nz/~ihaka/downloads/R-paper.pdf)
+- 1993: Primer anuncio de R al público
+- 1995: Martin Mächler convence a Ross y Robert de usar la [Licencia Pública General de GNU](https://es.wikipedia.org/wiki/GNU_General_Public_License) para que R sea [software libre](https://es.wikipedia.org/wiki/Software_libre)
+- 1996: Se crea listas públicas de correo ([R-help](https://stat.ethz.ch/mailman/listinfo/r-help) y [R-devel](https://stat.ethz.ch/mailman/listinfo/r-devel))
+- 1997: Se forma el **R Core Group** (incluyendo personas asociadas con S-PLUS). El Core Group controla el código fuente de R
+- 2000: Se lanza la versión 1.0.0 de R
+- `r yr`: Se lanza la versión `r ver` de R (última disponible)
+
+## Características de R
+- Corre en casi cualquier plataforma computacional estándar (incluso en una PS3)
+- Lanzamientos frecuentes (anuales + corrección de fallos): desarrollo activo
+- Bastante ligero en lo referente a software; la funcionalidad se divide en paquetes modulares
+- Capacidades gráficas sofisticadas, y mejores que la mayoría de los paquetes estadísticos
+- Ùtil para trabajo interactivo, pero con un poderoso lenguaje de programación para desarrollar nuevas herramientas (usuario -> programador)
+- Comunidad de usuarios muy activa y vibrante: [listas de correo de R](https://www.r-project.org/mail.html) y [Stack Overflow](http://stackoverflow.com/questions/tagged/r)
+- Es software libre! (tanto en el sentido de "gratuito" como de "libertad"); el software libre es promovido por la [Free Software Foundation](http://www.fsf.org)
+
+## Software libre
+- Libertad de correr el programa, para cualquier propósito (libertad 0)
+- Libertad de estudiar cómo funciona el programa, y adaptarlo a tus necesidades (libertad 1)
+- Libertad de redistribuir copias de modo a ayudar a tu prójimo (libertad 2)
+- Libertad de mejorar el programa, y lanzar tus mejoras al público, para que toda la comunidad se beneficie (libertad 3)
+
+## Desventajas de R
+- Empinada curva de aprendizaje (especialmente para no-programadores)
+- Funcionalidad basada en las demandas del consumidor y las contribuciones del usuario
+- Los objetos deben generalmente ser almacenados en la memoria física
+
+## Diseño del sistema de R
+- El sistema de R se divide en 2 partes conceptuales:
+    + El sistema "base" de R que puedes descargar de [CRAN](https://cran.r-project.org/)
+    + Todo lo demás
+
+## Diseño del sistema de R
+- La funcionalidad se divide en un número de **paquetes**
+    + El sistema "base" de R contiene el paquete *base* requerido para ejecutar R y las funciones más fundamentales
+    + Otros paquetes contenidos en el sistema R: **utils**, **stats**, **datasets**, **graphics**, **grDevices**, **grid**, **methods**, **tools**, **parallel**, **compiler**, **splines**, **tcltk**, **stats4**
+    + Paquetes "recomendados": **boot**, **class**, **cluster**, **codetools**, **foreign**, **KernSmooth**, **lattice**, **mgcv**, **nlme**, **rpart**, **survival**, **MASS**, **spatial**, **nnet**, **Matrix**.
+
+## Diseño del sistema de R
+- Existen muchos otros paquetes disponibles:
+    + Hay ~7,800 paquetes en [CRAN](http://cran.r-project.org) desarrollados por usuarios y programadores alrededor del mundo
+    + Paquetes específicos asociados con el proyecto Bioconductor (http://bioconductor.org)
+    + Paquetes en repositorios online como [GitHub](https://github.com/)
+
+## Uso de R
+- **Instalación local**
+    + CRAN: <https://www.r-project.org/>
+- **Servidores online públicos**
+    + R-fiddle: <http://www.r-fiddle.org/>
+    + DataJoy: <https://www.getdatajoy.com/>
+    + Codeanywhere: <https://codeanywhere.com/>
+- **Servidores online privados**
+    + achaux.com: <http://www.achaux.com/>
+
+## Interfaz gráfica
+- RStudio: <https://www.rstudio.com/>
+- Jupyter: <http://jupyter.org/>
+- Rcommander: <http://www.rcommander.com/>
+
+## Algunos recursos para aprender R
+- Manuales de R disponibles en [CRAN](https://cran.r-project.org/manuals.html)
+- MOOC: [Coursera](https://www.coursera.org/), [edX](https://courses.edx.org/)
+- Plataformas interactivas: [DataCamp](https://www.datacamp.com/), [swirl](http://swirlstats.com/)
+- Websites: [LeaRning path on R](http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-r-data-science/), [Cookbook for R](http://www.cookbook-r.com/), [Quick-R](http://www.statmethods.net/index.html), [R Data](http://varianceexplained.org/RData/), [Hadley's Advanced R](http://adv-r.had.co.nz/)
